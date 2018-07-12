@@ -27,3 +27,6 @@ Clover folder based in: [Acer Aspire VX15 VX5-591G](https://www.tonymacx86.com/t
 
 ## Needs replace hardware
 * Intel Dual Band Wireless-AC 7265 -> Broadcom BCM4352Z
+
+## Kexts Sources
+* [RehabMan](https://github.com/RehabMan?tab=repositories)
