@@ -14,13 +14,13 @@ Clover folder based in: [Acer Aspire VX15 VX5-591G](https://www.tonymacx86.com/t
 * HDMI
 * Bluetooth
 * USB 3.0
+* TouchPad
+* Audio
 
 ## Not working hardware
 * Nvidia 1050
 * Intel Dual Band Wireless-AC 7265: [WIP Driver](https://github.com/timkoers/AppleIntelWiFiMVM)
-* TouchPad
 * SD Card
-* Audio
 
 ## Not tested
 * USB-C
