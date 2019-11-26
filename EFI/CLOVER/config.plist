@@ -231,18 +231,22 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 kext-dev-mode=1 -disablegfxfirmware</string>
+		<string>dart=0 darkwake=no nv_disable=1 kext-dev-mode=1 -disablegfxfirmware</string>
+		<key>CustomLogo</key>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>DisableCloverHotkeys</key>
 		<false/>
-		<key>Legacy</key>
-		<string>PBR</string>
+		<key>HibernationFixup</key>
+		<false/>
 		<key>NeverDoRecovery</key>
 		<false/>
 		<key>NeverHibernate</key>
+		<false/>
+		<key>NoEarlyProgress</key>
 		<true/>
 		<key>RtcHibernateAware</key>
 		<false/>
@@ -500,7 +504,7 @@
 				<key>Device</key>
 				<string>NVidia</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Key</key>
 				<string>name</string>
 				<key>Value</key>
@@ -514,7 +518,7 @@
 				<key>Device</key>
 				<string>NVidia</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Key</key>
 				<string>IOName</string>
 				<key>Value</key>
@@ -526,7 +530,7 @@
 				<key>Device</key>
 				<string>NVidia</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Key</key>
 				<string>class-code</string>
 				<key>Value</key>
@@ -541,19 +545,26 @@
 			<string>0x0887</string>
 			<key>AFGLowPowerState</key>
 			<false/>
+			<key>Inject</key>
+			<integer>28</integer>
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
-		<key>LANInjection</key>
-		<false/>
+		<key>FakeID</key>
+		<dict>
+			<key>IntelGFX</key>
+			<string>0x59168086</string>
+		</dict>
+		<key>IntelMaxValue</key>
+		<string>0x0710</string>
 		<key>SetIntelBacklight</key>
-		<false/>
+		<true/>
 		<key>SetIntelMaxBacklight</key>
-		<false/>
+		<true/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>FixOwnership</key>
 			<true/>
 			<key>HighCurrent</key>
@@ -697,7 +708,7 @@
 		<key>ShowOptimus</key>
 		<false/>
 		<key>Theme</key>
-		<string>embedded</string>
+		<string>tonymacx86</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -751,6 +762,8 @@
 		<string>03010300FFFF0001</string>
 		<key>#ig-platform-id</key>
 		<string>0x01620005</string>
+		<key>DualLink</key>
+		<integer>1</integer>
 		<key>EDID</key>
 		<dict>
 			<key>#Custom</key>
@@ -776,10 +789,12 @@
 			<key>Intel</key>
 			<true/>
 			<key>NVidia</key>
-			<true/>
+			<false/>
 		</dict>
+		<key>VideoPorts</key>
+		<integer>3</integer>
 		<key>ig-platform-id</key>
-		<string>0x591b0000</string>
+		<string>0x591B0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -930,6 +945,8 @@
 			</dict>
 		</array>
 		<key>AppleIntelCPUPM</key>
+		<true/>
+		<key>AppleRTC</key>
 		<true/>
 		<key>Debug</key>
 		<false/>
@@ -1157,17 +1174,17 @@
 		<key>#Version</key>
 		<string>1.0</string>
 		<key>BiosReleaseDate</key>
-		<string>04/09/2018</string>
+		<string>10/30/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP141.88Z.0175.B00.1804091553</string>
+		<string>MBP141.88Z.F000.B00.1910301943</string>
 		<key>Board-ID</key>
 		<string>Mac-B4831CEBD52A0C4C</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02710207GUDNJKJA</string>
+		<string>C02720301GUHWVPJC</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1178,12 +1195,14 @@
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
+		<key>EfiVersion</key>
+		<string>203.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFC0FE176</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
+		<string>0xFF1FFF7F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
@@ -1196,6 +1215,8 @@
 		<string>MacBookPro14,1</string>
 		<key>SerialNumber</key>
 		<string>C02TD2XHHV29</string>
+		<key>SmUUID</key>
+		<string>E4A62A82-71CE-47B0-BD81-9F2496FB8E9A</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
@@ -1209,6 +1230,10 @@
 		<false/>
 		<key>#NvidiaWeb</key>
 		<false/>
+		<key>BacklightLevel</key>
+		<string>0x100</string>
+		<key>CustomUUID</key>
+		<string>D559D28E-B4B7-5FEC-90D0-E5D2D00CD0BA</string>
 		<key>InjectKexts</key>
 		<string>Detect</string>
 	</dict>
