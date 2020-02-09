@@ -784,6 +784,7 @@ DefinitionBlock ("", "SSDT", 1, "ACRSYS", "ACRPRDCT", 0x00001000)
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
             Store (Zero, \_SB.PCI0.PEG0.PEGP._ADR)
+            \_SB.PCI0.PEG0.PEGP._OFF ()
         }
 
         Method (GMXB, 0, NotSerialized)
