@@ -4,6 +4,7 @@ Clover folder based in: [Acer Aspire VX15 VX5-591G](https://www.tonymacx86.com/t
 ## Working macOS
 * High Sierra
 * Mojave
+* Catalina [BETA]
 
 ## Working hardware
 * BIOS v1.08
