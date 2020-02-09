@@ -503,7 +503,7 @@
 			<string>0x59168086</string>
 		</dict>
 		<key>IntelMaxValue</key>
-		<string>0x0710</string>
+		<string>0x0AD9</string>
 		<key>SetIntelBacklight</key>
 		<true/>
 		<key>SetIntelMaxBacklight</key>
@@ -728,6 +728,8 @@
 		<string>03010300FFFF0001</string>
 		<key>#ig-platform-id</key>
 		<string>0x01620005</string>
+		<key>DualLink</key>
+		<integer>1</integer>
 		<key>EDID</key>
 		<dict>
 			<key>#Custom</key>
@@ -750,6 +752,8 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>VideoPorts</key>
+		<integer>3</integer>
 		<key>ig-platform-id</key>
 		<string>0x591b0000</string>
 	</dict>
