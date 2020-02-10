@@ -1,14 +1,14 @@
-Firmware Error (ACPI): Failure looking up [^^WMID.FEBC], AE_NOT_FOUND (20180427/dswload-498)
+// Firmware Error (ACPI): Failure looking up [^^WMID.FEBC], AE_NOT_FOUND (20180427/dswload-498)
 // Invalid external declaration at AML offset 0x6ca (see bz1397).
-Firmware Error (ACPI): Failure looking up [^^PEG0.PEGP], AE_NOT_FOUND (20180427/dswload-498)
+// Firmware Error (ACPI): Failure looking up [^^PEG0.PEGP], AE_NOT_FOUND (20180427/dswload-498)
 // Invalid external declaration at AML offset 0x6ed (see bz1397).
-Firmware Error (ACPI): Failure looking up [^^PEG1.PEGP], AE_NOT_FOUND (20180427/dswload-498)
+// Firmware Error (ACPI): Failure looking up [^^PEG1.PEGP], AE_NOT_FOUND (20180427/dswload-498)
 // Invalid external declaration at AML offset 0x6fb (see bz1397).
-Firmware Error (ACPI): Failure looking up [^^WMID.FEBC], AE_NOT_FOUND (20180427/dswload2-468)
+// Firmware Error (ACPI): Failure looking up [^^WMID.FEBC], AE_NOT_FOUND (20180427/dswload2-468)
 // Invalid external declaration at AML offset 0x6ca (see bz1397).
-Firmware Error (ACPI): Failure looking up [^^PEG0.PEGP], AE_NOT_FOUND (20180427/dswload2-468)
+// Firmware Error (ACPI): Failure looking up [^^PEG0.PEGP], AE_NOT_FOUND (20180427/dswload2-468)
 // Invalid external declaration at AML offset 0x6ed (see bz1397).
-Firmware Error (ACPI): Failure looking up [^^PEG1.PEGP], AE_NOT_FOUND (20180427/dswload2-468)
+// Firmware Error (ACPI): Failure looking up [^^PEG1.PEGP], AE_NOT_FOUND (20180427/dswload2-468)
 // Invalid external declaration at AML offset 0x6fb (see bz1397).
 /*
  * Intel ACPI Component Architecture
@@ -169,6 +169,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
     External (TBTF, MethodObj)    // 1 Arguments (from opcode)
     External (WMID, DeviceObj)    // (from opcode)
 
+    Name (SS1, Zero)
     Name (SS2, Zero)
     Name (SS3, One)
     Name (SS4, One)
@@ -5271,10 +5272,12 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 PMES,   1
             }
 
+            /** PRW 1
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
                 Return (GPRW (0x6D, 0x04))
             }
+            */
 
             Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
             {
@@ -5414,10 +5417,12 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 }
             }
 
+            /** PRW 3
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
                 Return (GPRW (0x6D, 0x03))
             }
+            */
 
             Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
             {
@@ -6018,10 +6023,12 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 }
             }
 
+            /** PRW 2
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
                 Return (GPRW (0x6D, 0x04))
             }
+            */
 
             Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
             {
@@ -6071,10 +6078,12 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 Store (Arg0, PMEE)
             }
 
+            /** PRW 4
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
                 Return (GPRW (0x6D, 0x04))
             }
+            */
 
             Method (GPEH, 0, NotSerialized)
             {
